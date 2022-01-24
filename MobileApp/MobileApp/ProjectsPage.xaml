@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.ProjectsPage">
+    <NavigationPage.TitleView>
+        <Label Text="Проекты" FontSize="Large" TextColor="White"
+               Margin="90,0"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <ListView x:Name="projectsList">
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
