@@ -10,21 +10,34 @@
             <StackLayout Orientation="Horizontal" Spacing="30">
                 <StackLayout Orientation="Vertical" Spacing="8">
                     <Label Text="Email" FontSize="Medium"/>
-                    <Entry x:Name="entEmail" Keyboard="Email" FontSize="24" WidthRequest="360" Margin="0, 0, 0, 30"/>
+                    <Frame
+                        Padding="-5" BackgroundColor="White"
+                        BorderColor="Black">
+                        <Entry x:Name="entEmail" Keyboard="Email" FontSize="24" WidthRequest="300"/>
+                    </Frame>
                     <Label Text="Логин" FontSize="Medium"/>
-                    <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="360" Margin="0, 0, 0, 30"/>
+                    <Frame
+                        Padding="-5" BackgroundColor="White"
+                        BorderColor="Black">
+                        <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="300"/>
+                    </Frame>
                     <Label Text="Пароль" FontSize="Medium"/>
-                    <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="360" Margin="0, 0, 0, 30"/>
+                    <Frame
+                        Padding="-5" BackgroundColor="White"
+                        BorderColor="Black">
+                        <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="300"/>
+                    </Frame>
                     <Label Text="Потверждения пароля" FontSize="Medium"/>
-                    <Entry x:Name="entPassword2" FontSize="24" IsPassword="True" WidthRequest="360"/>
+                    <Frame
+                        Padding="-5" BackgroundColor="White"
+                        BorderColor="Black">
+                        <Entry x:Name="entPassword2" FontSize="24" IsPassword="True" WidthRequest="300"/>
+                    </Frame>
                 </StackLayout>
             </StackLayout>
-            <!--Nested Stack Layout Allign Horizontally-->
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
-
-            <!--Nested Stack Layout Allign Horizontally-->
 
         </StackLayout>
     </ContentPage.Content>

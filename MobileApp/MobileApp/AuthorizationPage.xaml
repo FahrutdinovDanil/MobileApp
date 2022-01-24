@@ -3,19 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileApp.AuthorizationPage">
     <ContentPage.Content>
-        <!--Main Stack Layout, Allign vertically.-->
         <StackLayout Orientation="Vertical" Spacing="20" Padding="20">
             <Image Source="logo.png" Margin="0, 0, 0, 40"/>
             <StackLayout Orientation="Horizontal" Spacing="30">
-                <!--Nested Stack Layout Allign vertically-->
                 <StackLayout Orientation="Vertical" Spacing="5">
                     <Label Text="Логин" FontSize="Medium"/>
-                    <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="360" Margin="0, 0, 0, 30"/>
+                    <Frame
+                        Padding="-5" BackgroundColor="White"
+                        BorderColor="Black">
+                        <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="300"/>
+                    </Frame>
                     <Label Text="Пароль" FontSize="Medium"/>
-                    <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="360"/>
+                    <Frame
+                        Padding="-5" BackgroundColor="White"
+                        BorderColor="Black">
+                        <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="300"/>
+                    </Frame>
                 </StackLayout>
             </StackLayout>
-            <!--Nested Stack Layout Allign Horizontally-->
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand"/>
                 <Button x:Name="Auth" Text="Войти" HorizontalOptions="FillAndExpand"/>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.ImagesPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10" >
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="10">
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+                <Image Source="project.png" WidthRequest="150" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,7 +10,7 @@ namespace MobileApp
         {
             InitializeComponent();
 
-            MainPage = new ProjectsPage();
+            MainPage = new AuthorizationPage();
         }
 
         protected override void OnStart()
