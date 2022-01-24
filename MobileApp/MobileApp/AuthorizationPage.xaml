@@ -22,8 +22,8 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand"/>
-                <Button x:Name="Auth" Text="Войти" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand" Clicked="Button_Registr_Clicked"/>
+                <Button x:Name="Auth" Text="Войти" HorizontalOptions="FillAndExpand" Clicked="Button_Login_Clicked"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

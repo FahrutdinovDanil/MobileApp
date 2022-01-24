@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileApp.RegistrationPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="fdsfsf" Priority="0" Order="Primary"/>
-    </ContentPage.ToolbarItems>
+    <NavigationPage.TitleView>
+        <Label Text="Регистрация" FontSize="Large" TextColor="White"  Margin="75,0"></Label>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="10">
             <StackLayout Orientation="Horizontal" Spacing="30">
@@ -36,7 +36,7 @@
                 </StackLayout>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand" Clicked="Button_Clicked_Auth"/>
             </StackLayout>
 
         </StackLayout>

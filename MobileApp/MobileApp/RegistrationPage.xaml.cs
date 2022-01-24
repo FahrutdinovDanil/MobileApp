@@ -16,5 +16,9 @@ namespace MobileApp
         {
             InitializeComponent();
         }
+        private async void Button_Clicked_Auth(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AuthorizationPage());
+        }
     }
 }

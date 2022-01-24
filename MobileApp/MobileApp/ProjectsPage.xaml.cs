@@ -22,5 +22,10 @@ namespace MobileApp
 
             projectsList.ItemsSource = projects;
         }
+        private async void projectsList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+                await Navigation.PushAsync(new ProjectPage(e.SelectedItem.ToString()));
+        }
     }
 }
