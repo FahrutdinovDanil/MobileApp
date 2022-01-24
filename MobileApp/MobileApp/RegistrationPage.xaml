@@ -1,25 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileApp.AuthorizationPage">
+             x:Class="MobileApp.RegistrationPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="fdsfsf" Priority="0" Order="Primary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <!--Main Stack Layout, Allign vertically.-->
-        <StackLayout Orientation="Vertical" Spacing="20" Padding="20">
-            <Image Source="logo.png" Margin="0, 0, 0, 40"/>
+        <StackLayout Orientation="Vertical" Padding="10">
             <StackLayout Orientation="Horizontal" Spacing="30">
-                <!--Nested Stack Layout Allign vertically-->
-                <StackLayout Orientation="Vertical" Spacing="5">
+                <StackLayout Orientation="Vertical" Spacing="8">
+                    <Label Text="Email" FontSize="Medium"/>
+                    <Entry x:Name="entEmail" Keyboard="Email" FontSize="24" WidthRequest="360" Margin="0, 0, 0, 30"/>
                     <Label Text="Логин" FontSize="Medium"/>
                     <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="360" Margin="0, 0, 0, 30"/>
                     <Label Text="Пароль" FontSize="Medium"/>
-                    <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="360"/>
+                    <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="360" Margin="0, 0, 0, 30"/>
+                    <Label Text="Потверждения пароля" FontSize="Medium"/>
+                    <Entry x:Name="entPassword2" FontSize="24" IsPassword="True" WidthRequest="360"/>
                 </StackLayout>
             </StackLayout>
             <!--Nested Stack Layout Allign Horizontally-->
             <StackLayout Orientation="Horizontal">
                 <Button x:Name="Reg" Text="Зарегистрироваться" HorizontalOptions="FillAndExpand"/>
-                <Button x:Name="Auth" Text="Войти" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
+
+            <!--Nested Stack Layout Allign Horizontally-->
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
