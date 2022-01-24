@@ -11,13 +11,13 @@
                     <Frame
                         Padding="-5" BackgroundColor="White"
                         BorderColor="Black">
-                        <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="300"/>
+                        <Entry x:Name="entLogin" Keyboard="Email" FontSize="24" WidthRequest="360"/>
                     </Frame>
                     <Label Text="Пароль" FontSize="Medium"/>
                     <Frame
                         Padding="-5" BackgroundColor="White"
                         BorderColor="Black">
-                        <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="300"/>
+                        <Entry x:Name="entPassword" FontSize="24" IsPassword="True" WidthRequest="360"/>
                     </Frame>
                 </StackLayout>
             </StackLayout>

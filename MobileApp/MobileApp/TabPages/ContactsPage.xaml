@@ -10,25 +10,25 @@
                     <Frame
                         Padding="-5" BackgroundColor="#CBCBCB"
                         BorderColor="Black"> 
-                            <Entry x:Name="entPhone" FontSize="24" WidthRequest="300"/>
+                            <Entry x:Name="entPhone" FontSize="24" WidthRequest="360"/>
                     </Frame>
                     <Label Text="Телефон" FontSize="Medium"/>
                     <Frame
                         Padding="-5" BackgroundColor="#CBCBCB"
                         BorderColor="Black">
-                        <Entry x:Name="entPhone2" FontSize="24" WidthRequest="300"/>
+                        <Entry x:Name="entPhone2" FontSize="24" WidthRequest="360"/>
                     </Frame>
                     <Label Text="Email" FontSize="Medium"/>
                     <Frame
                         Padding="-5" BackgroundColor="#CBCBCB"
                         BorderColor="Black">
-                        <Entry x:Name="entEmail" Keyboard="Email" FontSize="24" WidthRequest="300"/>
+                        <Entry x:Name="entEmail" Keyboard="Email" FontSize="24" WidthRequest="360"/>
                     </Frame>
                     <Label Text="Адрес" FontSize="Medium"/>
                     <Frame
                         Padding="-5" BackgroundColor="#CBCBCB"
                         BorderColor="Black">
-                        <Entry x:Name="entAddress" FontSize="24" WidthRequest="300"/>
+                        <Entry x:Name="entAddress" FontSize="24" WidthRequest="360"/>
                     </Frame>
                 </StackLayout>
             </StackLayout>

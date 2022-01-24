@@ -16,16 +16,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="AboutPage.xaml">
+    <EmbeddedResource Update="TabPages\AboutPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="AuthorizationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ContactsPage.xaml">
+    <EmbeddedResource Update="TabPages\ContactsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ImagesPage.xaml">
+    <EmbeddedResource Update="TabPages\ImagesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ProjectPage.xaml">
