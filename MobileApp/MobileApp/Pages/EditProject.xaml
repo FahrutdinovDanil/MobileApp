@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.Pages.EditProject">
+    
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Изменить проект" FontSize="Large" VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" TextColor="White"></Label>
+            <Label
+                FontFamily="Font"
+                FontSize="Title"
+                Text="&#xe16c;"
+                TextColor="White"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="End"
+                Padding="10">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="30" Spacing="20">
+                <StackLayout Spacing="20">
+                    <Entry Text="{Binding Name}" Placeholder="Имя проекта"/>
+                    <Editor Text="{Binding Description}" Placeholder="Описание"/>
+                    <Entry Text="{Binding Phone}" Placeholder="Телефон №1"/>
+                    <Entry Text="{Binding Email}" Placeholder="Email"/>
+                    <Entry Text="{Binding Address}" Placeholder="Адрес"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
+                    <Button Text="Отмена" Clicked="Cancel" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Изменить" Clicked="SaveProject" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
