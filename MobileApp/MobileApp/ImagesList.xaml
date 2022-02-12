@@ -2,11 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MobileApp.ImagesList">
-    <ContentPage.Content>
+    <StackLayout Padding="30" Spacing="30">
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="nameImg" Placeholder="Введите название"/>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
+            <Button Clicked="GetPhotoAsync" Text="Галерея" HorizontalOptions="FillAndExpand"/>
+            <Button Clicked="TakePhotoAsync" Text="Камера" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout>
+            <Button Clicked="AddImage" Text="Добавить" />
+        </StackLayout>
+        <ListView
+            x:Name="imgList"
+            ItemSelected="imgList_ItemSelected"
+            ItemsSource="{Binding}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Label Padding="10" Text="{Binding Name}" TextColor="Black" FontSize="Medium" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

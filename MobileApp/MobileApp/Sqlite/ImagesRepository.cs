@@ -11,25 +11,25 @@ namespace MobileApp.Sqlite
         public ImagesRepository(string databasePath)
         {
             database = new SQLiteConnection(databasePath);
-            database.CreateTable<Image>();
+            database.CreateTable<Photo>();
         }
 
-        public IEnumerable<Image> GetItems()
+        public IEnumerable<Photo> GetItems()
         {
-            return database.Table<Image>().ToList();
+            return database.Table<Photo>().ToList();
         }
 
-        public Image GetItem(int id)
+        public Photo GetItem(int id)
         {
-            return database.Get<Image>(id);
+            return database.Get<Photo>(id);
         }
 
         public int DeleteItem(int id)
         {
-            return database.Delete<Image>(id);
+            return database.Delete<Photo>(id);
         }
 
-        public int SaveItem(Image item)
+        public int SaveItem(Photo item)
         {
             if (item.Id != 0)
             {

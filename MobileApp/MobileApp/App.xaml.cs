@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using System.IO;
 using Xamarin.Forms.Xaml;
+using MobileApp.Sqlite;
 
 namespace MobileApp
 {

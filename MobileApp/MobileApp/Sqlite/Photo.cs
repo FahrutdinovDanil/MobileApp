@@ -6,7 +6,7 @@ using SQLite;
 namespace MobileApp.Sqlite
 {
     [Table("Images")]
-    public class Image
+    public class Photo
     {
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int Id { get; set; }
