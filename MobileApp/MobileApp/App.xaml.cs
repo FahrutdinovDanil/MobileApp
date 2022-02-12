@@ -4,7 +4,7 @@ using System.IO;
 using Xamarin.Forms.Xaml;
 using MobileApp.Sql_Lite;
 
-[assembly: ExportFont("MaterialIcons-Regular.ttf", Alias = "Fonts")]
+[assembly: ExportFont("MaterialIcons-Regular.ttf", Alias = "Font")]
 namespace MobileApp
 {
     public partial class App : Application

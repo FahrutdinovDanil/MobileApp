@@ -1,24 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileApp.Pages.AddProject">
-    
+             x:Class="MobileApp.Pages.AddProject"
+             Visual="Material">
+
     <NavigationPage.TitleView>
-        <Label Text="Добавить проект" FontSize="Large" TextColor="White" Margin="30,0"></Label>
+        <Label Text="Добавить проект" FontSize="24" TextColor="White"  Margin="20,0"/>
     </NavigationPage.TitleView>
-    <ContentPage.Content>
-        <StackLayout Padding="30">
-            <StackLayout  Spacing="20">
-                <Entry Text="{Binding Name}" Placeholder="Имя проекта"/>
-                <Editor Text="{Binding Description}" Placeholder="Описание проекта" HeightRequest="200" Visual="Default"/>
-                <Entry Text="{Binding Email}" Placeholder="E-mail"/>
-                <Entry Text="{Binding Phone}" Placeholder="Телефон"/>
-                <Entry Text="{Binding Address}" Placeholder="Адрес"/>
+
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout >
+                <Frame Margin="40,40,40,30"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Name}" FontFamily="Font" x:Name="txt_AddName" BackgroundColor="#E8E8E8" Placeholder="Имя проекта" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30"
+                   Padding="0" 
+                       HeightRequest="200"
+                       BorderColor="#E8E8E8">
+                    <Editor HeightRequest="200" Text="{Binding Description}" FontFamily="Font" x:Name="txt_AddDescription" BackgroundColor="#E8E8E8" Placeholder="Описание" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Phone}" FontFamily="Font" x:Name="txt_AddTel" BackgroundColor="#E8E8E8" Placeholder="Телефон" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Email}" FontFamily="Font" x:Name="txt_AddEmail" BackgroundColor="#E8E8E8" Placeholder="Email" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,40"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Address}" FontFamily="Font" x:Name="txt_AddAddress" BackgroundColor="#E8E8E8" Placeholder="Адрес" TextColor="Black" />
+                </Frame>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Padding="0,30,0,0">
+                    <Button CornerRadius="50" BackgroundColor="#00B2FF" Text="Отмена" Clicked="Cancel" />
+                    <Button CornerRadius="50" BackgroundColor="#00B2FF" Text="Сохранить" Clicked="ButtonSave_Clicked"/>
+                    
+                </StackLayout>
             </StackLayout>
-            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
-                <Button Text="Отмена" Clicked="Cancel" HorizontalOptions="FillAndExpand"/>
-                <Button Text="Добавить" Clicked="SaveProject" HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

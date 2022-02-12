@@ -1,16 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileApp.AboutPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Описание:" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" Padding="10"/>
+             x:Class="MobileApp.AboutPage"
+             Visual="Material">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ScrollView>
             <StackLayout>
-                <Label Padding="5" IsEnabled="False" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ultricies orci, in porta sem. Vestibulum in risus iaculis, porta orci at, bibendum velit. Nam volutpat pulvinar feugiat. Suspendisse imperdiet scelerisque porttitor. Integer mauris nibh, varius nec sem at, molestie cursus enim. Curabitur quis ipsum arcu. Ut ac accumsan dolor, sit amet molestie massa. In pharetra metus nec metus rutrum rhoncus. Quisque vestibulum dui dui, nec posuere nunc condimentum ut. Nunc accumsan sagittis dolor eu imperdiet."/>
-                <Label Padding="5" IsEnabled="False" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Phasellus non purus et ante convallis volutpat. Curabitur fringilla, ligula quis consequat feugiat, nibh justo condimentum diam, sit amet tincidunt dui sapien ut ante. Integer pretium dui vitae magna interdum pellentesque. In ac ornare est. Donec congue volutpat nibh, sed pretium mi venenatis vel. Donec rutrum elementum lectus, eu posuere libero commodo id. Pellentesque molestie sollicitudin velit et sagittis."/>
-                <Label Padding="5" IsEnabled="False" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc cursus quam ac mauris cursus pharetra. Nam quis pretium lorem. Phasellus erat nibh, tempus eget arcu et, malesuada malesuada nibh. Praesent semper nulla vel ligula pharetra, et fringilla metus viverra. Morbi orci tortor, mattis eu arcu eu, tristique venenatis quam. Fusce facilisis vel est nec laoreet. In dictum felis nisl, ullamcorper pulvinar enim volutpat et. Integer in nisl ut elit gravida maximus. Fusce nec lacus a massa cursus elementum quis commodo enim. Aliquam tincidunt, velit ut sollicitudin laoreet, felis odio accumsan nisi, nec placerat nulla est quis lorem. Suspendisse sed sapien sit amet tellus viverra porttitor. Nam nunc massa, tempus et velit a, volutpat semper ipsum."/>
-                <Label Padding="5" IsEnabled="False" TextColor="Black" HorizontalTextAlignment="Center" FontAttributes="Bold" Text="Aliquam condimentum dolor sed condimentum finibus. In nec tincidunt magna. Proin suscipit mi non orci facilisis efficitur. Proin vel bibendum urna, in sagittis turpis. Aliquam in tellus nec augue tempor viverra non eu nibh. Quisque porttitor dolor tortor, quis condimentum elit malesuada et. Nulla facilisi. Aliquam erat volutpat. Nulla facilisi. Maecenas imperdiet euismod dapibus. Maecenas pharetra lectus eget feugiat aliquet."/>
+                <Label Grid.Row="0" Text="Описание:" HorizontalTextAlignment="Center" Margin="0,40,0,0" FontSize="Large" FontFamily="Font"/>
+                <Label Grid.Row="1" x:Name="projDesc" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="Large" FontFamily="Font"/>
             </StackLayout>
-        </StackLayout>
-    </ContentPage.Content>
+        </ScrollView>
+    </Grid>
 </ContentPage>

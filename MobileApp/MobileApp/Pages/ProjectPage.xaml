@@ -1,10 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MobileApp"
-            x:Class="MobileApp.ProjectPage">
+            x:Class="MobileApp.ProjectPage"
+            Visual="Material">
+    
     <NavigationPage.TitleView>
-        <Label x:Name="titles"  FontSize="Large" TextColor="White"  Margin="75,0"></Label>
+        <Label x:Name="proj_title" FontFamily="Font" FontSize="Large" TextColor="White"  Margin="75,0"></Label>
     </NavigationPage.TitleView>
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem
+            IconImageSource="edit.png"
+            Order="Primary" Clicked="Edit_Clicked"/>
+    </TabbedPage.ToolbarItems>
+
     <TabbedPage.Children>
         <local:AboutPage Title="О проекте"/>
         <local:ImagesPage Title="Картинки"/>

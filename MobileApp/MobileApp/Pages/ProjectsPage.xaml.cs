@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MobileApp.Pages;
+using MobileApp.Sql_Lite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +16,29 @@ namespace MobileApp
     {
         public ProjectsPage()
         {
+            this.BindingContext = this;
+
             InitializeComponent();
-            string[] projects = new string[] { "Проект 1", "Проект 2", "Проект 3", "Проект 4",
-                "Проект 5", "Проект 6", "Проект 7", "Проект 8", "Проект 9", "Проект 10", "Проект 11",
-                "Проект 12", "Проект 13", "Проект 14", "Проект 15", "Проект 16", "Проект 17", "Проект 18" };
-
-
-            projectsList.ItemsSource = projects;
         }
-        private async void projectsList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        protected override void OnAppearing()
         {
-            if (e.SelectedItem != null)
-                await Navigation.PushAsync(new ProjectPage(e.SelectedItem.ToString()));
+            projectList.ItemsSource = App.Database.GetItems();
+            base.OnAppearing();
+        }
+
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            Project selectedProject = (Project)e.SelectedItem;
+            ProjectPage projectPage = new ProjectPage(selectedProject);
+            await Navigation.PushAsync(projectPage);
+        }
+
+        private async void CreateProject(object sender, EventArgs e)
+        {
+            Project proj = new Project();
+            AddProject projPage = new AddProject();
+            projPage.BindingContext = proj;
+            await Navigation.PushAsync(projPage);
         }
     }
 }

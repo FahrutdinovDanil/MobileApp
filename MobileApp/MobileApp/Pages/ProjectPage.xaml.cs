@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MobileApp.Pages;
+using MobileApp.Sql_Lite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +14,18 @@ namespace MobileApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProjectPage : TabbedPage
     {
-
-        public ProjectPage(string projectName)
+        Project project;
+        public ProjectPage(Project newProj)
         {
             InitializeComponent();
-            Title = projectName;
+
+            project = newProj;
+            proj_title.Text = project.Name;
+        }
+        private async void Edit_Clicked(object sender, EventArgs e)
+        {
+            EditProject editProjectPage = new EditProject(project);
+            await Navigation.PushAsync(editProjectPage);
         }
     }
 }

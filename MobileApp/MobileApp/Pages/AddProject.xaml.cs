@@ -22,7 +22,7 @@ namespace MobileApp.Pages
             this.Navigation.PopAsync();
         }
 
-        private void SaveProject(object sender, EventArgs e)
+        private void ButtonSave_Clicked(object sender, EventArgs e)
         {
             var proj = (Project)BindingContext;
             if (!String.IsNullOrEmpty(proj.Name))

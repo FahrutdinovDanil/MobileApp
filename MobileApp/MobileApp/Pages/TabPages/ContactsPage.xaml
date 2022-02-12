@@ -1,37 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileApp.ContactsPage">
-    <ContentPage.Content>
-        <StackLayout Orientation="Vertical" Padding="10">
-            <StackLayout Orientation="Horizontal">
-                <StackLayout Orientation="Vertical" Spacing="8">
-                    <Label Text="Телефон" FontSize="Medium"/>
-                    <Frame
-                        Padding="-5" BackgroundColor="#CBCBCB"
-                        BorderColor="Black"> 
-                            <Entry x:Name="entPhone" FontSize="24" WidthRequest="360"/>
-                    </Frame>
-                    <Label Text="Телефон" FontSize="Medium"/>
-                    <Frame
-                        Padding="-5" BackgroundColor="#CBCBCB"
-                        BorderColor="Black">
-                        <Entry x:Name="entPhone2" FontSize="24" WidthRequest="360"/>
-                    </Frame>
-                    <Label Text="Email" FontSize="Medium"/>
-                    <Frame
-                        Padding="-5" BackgroundColor="#CBCBCB"
-                        BorderColor="Black">
-                        <Entry x:Name="entEmail" Keyboard="Email" FontSize="24" WidthRequest="360"/>
-                    </Frame>
-                    <Label Text="Адрес" FontSize="Medium"/>
-                    <Frame
-                        Padding="-5" BackgroundColor="#CBCBCB"
-                        BorderColor="Black">
-                        <Entry x:Name="entAddress" FontSize="24" WidthRequest="360"/>
-                    </Frame>
-                </StackLayout>
-            </StackLayout>
+             x:Class="MobileApp.ContactsPage"
+             Visual="Material">
+    
+    <ContentPage.Content >
+        <StackLayout>
+            <Frame  Margin="40,40,40,40"
+                    Padding="0" BorderColor="#E8E8E8">
+                <Entry FontFamily="Font" x:Name="txt_contc_tel" BackgroundColor="#E8E8E8" Text="" Placeholder="Телефон" TextColor="Black" IsReadOnly="True"/>
+            </Frame>
+
+            <Frame Margin="40,0,40,40"
+                    Padding="0" BorderColor="#E8E8E8">
+                <Entry  FontFamily="Font" x:Name="txt_ContEmail" BackgroundColor="#E8E8E8" Text="" Placeholder="E-mail" TextColor="Black" IsReadOnly="True"/>
+            </Frame>
+
+            <Frame Margin="40,0,40,150"
+                    Padding="0" BorderColor="#E8E8E8">
+                <Entry FontFamily="Font" x:Name="txt_ContAdress" BackgroundColor="#E8E8E8" Text="" Placeholder="Адрес" TextColor="Black" IsReadOnly="True"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

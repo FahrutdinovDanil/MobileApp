@@ -1,39 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobileApp.Pages.EditProject">
-    
+             x:Class="MobileApp.Pages.EditProject"
+             Visual="Material">
+
     <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-            <Label Text="Изменить проект" FontSize="Large" VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand" TextColor="White"></Label>
-            <Label
-                FontFamily="Font"
-                FontSize="Title"
-                Text="&#xe16c;"
-                TextColor="White"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="End"
-                Padding="10">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-                </Label.GestureRecognizers>
-            </Label>
-        </StackLayout>
+        <Label Text="Изменить проект" FontSize="24" TextColor="White"  Margin="20,0"/>
     </NavigationPage.TitleView>
-    <ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            IconImageSource="Delete.png"
+            Order="Primary" Clicked="Delete_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content >
         <ScrollView>
-            <StackLayout Padding="30" Spacing="20">
-                <StackLayout Spacing="20">
-                    <Entry Text="{Binding Name}" Placeholder="Имя проекта"/>
-                    <Editor Text="{Binding Description}" Placeholder="Описание"/>
-                    <Entry Text="{Binding Phone}" Placeholder="Телефон №1"/>
-                    <Entry Text="{Binding Email}" Placeholder="Email"/>
-                    <Entry Text="{Binding Address}" Placeholder="Адрес"/>
-                </StackLayout>
-                <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal">
-                    <Button Text="Отмена" Clicked="Cancel" HorizontalOptions="FillAndExpand"/>
-                    <Button Text="Изменить" Clicked="SaveProject" HorizontalOptions="FillAndExpand"/>
+            <StackLayout >
+                <Frame Margin="40,40,40,30"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Name}" FontFamily="Font" x:Name="txt_AddName" BackgroundColor="#E8E8E8" Placeholder="Имя проекта" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30"
+                   Padding="0" 
+                       HeightRequest="200"
+                       BorderColor="#E8E8E8">
+                    <Editor HeightRequest="200" Text="{Binding Description}" FontFamily="Font" x:Name="txt_AddDescription" BackgroundColor="#E8E8E8" Placeholder="Описание" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Phone}" FontFamily="Font" x:Name="txt_AddTel" BackgroundColor="#E8E8E8" Placeholder="Телефон" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,30"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Email}" FontFamily="Font" x:Name="txt_AddEmail" BackgroundColor="#E8E8E8" Placeholder="Email" TextColor="Black" />
+                </Frame>
+
+                <Frame Margin="40,0,40,40"
+                   Padding="0" BorderColor="#E8E8E8">
+                    <Entry Text="{Binding Address}" FontFamily="Font" x:Name="txt_AddAdress" BackgroundColor="#E8E8E8" Placeholder="Адрес" TextColor="Black" />
+                </Frame>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Padding="0,30,0,0">
+                    <Button CornerRadius="50" BackgroundColor="#00B2FF" Text="Сохранить" Clicked="ButtonSave_Clicked"/>
+                    <Button CornerRadius="50" BackgroundColor="#00B2FF" Text="Отмена" Clicked="Cancel" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>
