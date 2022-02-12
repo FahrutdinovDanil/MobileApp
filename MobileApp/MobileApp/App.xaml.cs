@@ -28,7 +28,7 @@ namespace MobileApp
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ImagesList());
         }
 
         protected override void OnStart()

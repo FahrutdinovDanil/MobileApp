@@ -30,13 +30,13 @@ namespace MobileApp
 
         private void UpdateList()
         {
-            imgList.ItemsSource = App.Database.GetItems();          
+            imgList.ItemsSource = App.Database.GetItems();
         }
 
         private async void GetPhotoAsync(object sender, EventArgs e)
         {
             try
-            {         
+            {
                 var photo = await MediaPicker.PickPhotoAsync();
                 pathName = photo.FullPath;
             }
@@ -82,7 +82,7 @@ namespace MobileApp
 
         private async void imgList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Image selectedImage = (Image)e.SelectedItem;
+            Photo selectedImage = (Photo)e.SelectedItem;
             SelectedImage imagePage = new SelectedImage();
             imagePage.BindingContext = selectedImage;
             await Navigation.PushAsync(imagePage);
